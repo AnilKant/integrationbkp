@@ -1,0 +1,657 @@
+
+
+<?php
+   /**
+    * Created by PhpStorm.
+    * User: cedcoss
+    * Date: 3/7/18
+    * Time: 1:01 PM
+    */
+   $hostname = Yii::getAlias('@hostname') . '/';
+   ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Shopify Integration With Jet, Walmart, Newegg, Bonanza, amazon, Sears.</title>
+      <meta name="title" content="Shopify Integration With Jet, Walmart, Newegg, Bonanza, amazon, Sears."/>
+      <meta name="description"
+         content="Do you have a Shopify Store and disappointed with Sales but not sure where to begin? CedCommerce brings to you Integration apps for Selling on Walmart, Jet, Newegg,Newegg Canada,Bonanza, Sears, tophatter, pricefalls and Amazon"/>
+      <meta name="keywords"
+         content="walmart shopify integration, jet shopify integration, newegg shopify integration, fruugo shopify integration, shopify to walmart, shopify to jet, shopify to newegg, shopify to sears, sell on jet, sell on walmart, sell on newegg, sell on newegg, sell on newegg canada, sell on tophatter, sell on bonanza, sell on pricefalls"/>
+      <meta name="Resource-type" content="Document"/>
+      <meta name="ROBOTS" content="INDEX,FOLLOW">
+      <meta property="og:title" content="Shopify Integration With Jet, Walmart, Newegg, Bonanza, amazon, Sears.">
+      <meta property="og:description"
+         content="Do you have a Shopify Store and disappointed with Sales but not sure where to begin? CedCommerce brings to you Integration apps for Selling on Walmart, Jet, Newegg,Newegg Canada,Bonanza, Sears, tophatter, pricefalls and Amazon">
+      <meta property="og:image" content="<?= $hostname ?>integration/images/shopi-2.png"/>
+      <meta property="og:type" content="WEBSITE"/>
+      <meta property="og:url" content="<?= $hostname ?>integration/"/>
+      <meta property="og:site_name" content="CedCommerce"/>
+      <meta name="twitter:title" content="Shopify Integration With Jet, Walmart, Newegg, Bonanza, amazon, Sears.">
+      <meta name="twitter:description"
+         content="Do you have a Shopify Store and disappointed with Sales but not sure where to begin? CedCommerce brings to you Integration apps for Selling on Walmart, Jet, Newegg,Newegg Canada,Bonanza, Sears, tophatter, pricefalls and Amazon">
+      <meta property="twitter:image" content="<?= $hostname ?>integration/images/shopi-2.png"/>
+      <meta property="twitter:url" content="<?= $hostname ?>integration/"/>
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/jquery.fullPage.css"/>
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/component.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/owl.theme.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/landing-page-style.css">
+      <link rel="canonical" href="<?= $hostname ?>integration/"/>
+      <script src="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/jquery-1.9.1.min.js"></script>
+      <meta name="twitter:title" content="Shopify Integration With Jet, Walmart, Newegg, Bonanza, amazon, Sears.">
+      <meta name="twitter:description"
+         content="Do you have a Shopify Store and disappointed with Sales but not sure where to begin? CedCommerce brings to you Integration apps for Selling on Walmart, Jet, Newegg,Newegg Canada,Bonanza, Sears, tophatter, pricefalls and Amazon">
+      <meta property="twitter:image" content="<?= $hostname ?>image/shopi-2.png"/>
+      <meta property="twitter:url" content="<?= $hostname ?>integration/"/>
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/jquery.fullPage.css"/>
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/component.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/owl.theme.min.css">
+      <link rel="stylesheet" type="text/css"
+         href="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/css/landing-page-style.css">
+      <link rel="canonical" href="<?= $hostname ?>integration/site/offers"/>
+      <style type="text/css">
+         a:focus {
+         outline: 0 none;
+         }
+         .offers-section {
+         padding: 60px 0;
+         background-color: #f5f7f9;
+         }
+         .wrapper {
+         border: 1px solid #eeeeee;
+         display: table;
+         margin: 0 auto;
+         width: 90%;
+         }
+         .coupen-wrapper .wrapper a {
+         color: #333333;
+         display: block;
+         text-decoration: none;
+         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+         transition: 0.3s all;
+         -moz-transition: 0.3s all;
+         -o-transition: 0.3s all;
+         -ms-transition: 0.3s all;
+         }
+         /* .coupen-wrapper .wrapper a:hover {
+         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+         transform: scale(1.01);
+         } */
+         .content-wrapper {
+         padding: 20px 20px 70px;
+         position: relative;
+         }
+         .content-wrapper h2 {
+         font-size: 18px;
+         margin: 25px 0;
+         }
+         .content-wrapper p {
+         color: #666666;
+         font-size: 15px;
+         line-height: 28px;
+         margin: 4px 0;
+         }
+         .image-wrapper img {
+         width: 100%;
+         }
+         .coupon-code-wrap {
+         background: #ececec none repeat scroll 0 0;
+         border-top: 1px solid #eeeeee;
+         bottom: 0;
+         height: 70px;
+         left: 0;
+         line-height: 70px;
+         padding: 0 20px;
+         position: absolute;
+         width: 100%;
+         }
+         .coupon-code-wrap .price {
+         float: right;
+         }
+         .offers-section h1 {
+         font-size: 26px;
+         margin-bottom: 35px;
+         margin-top: 0;
+         text-align: center;
+         }
+         
+         .wrapper{
+         margin-bottom: 80px;
+         background-color: #fff;
+         }
+         .heading{
+         text-align: center;
+         margin-bottom: 35px;
+         padding: 40px 50px 40px 50px;
+         }
+         .heading a:hover{
+         color: #6170cb;
+         transition: .5s all ease-out ;
+         }
+         .read{
+         color:#6170cb;
+        
+         }
+         .read2{
+          margin-bottom:58px;
+         }
+         .content-wrapper a{
+         color: #6170cb;
+         transition: 1.5s all ease-out ;
+         }
+         .panel-title{
+         position: relative !important;
+         font-size: 18px;
+         text-decoration: none;        
+         padding-bottom: 22px;
+         padding-top: 22px;
+         }
+         .glyphicon{
+         position: absolute !important;
+         right: 0px !important;
+         font-size: 18px;
+         text-decoration: none;
+         padding-bottom: 22px;
+         padding-top: 22px;
+         }
+         .panel-title a{
+         text-decoration: none !important;
+         }
+         .panel-group{
+         margin-bottom: 0px;
+         }
+         .coupen-wrapper .wrapper a {
+         box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.12);
+         transition: 0.3s all;
+         -moz-transition: 0.3s all;
+         -o-transition: 0.3s all;
+         -ms-transition: 0.3s all;
+         }
+         .panel-body ul {
+         list-style: none;
+         }
+         .price_table li{
+         margin: 15px 0px;
+         font-size: 14px;
+         }
+         .price_table ul{
+         padding-left: 0px;
+         }
+         .price_head{
+         margin-bottom: 10px;
+         }
+         .product_name{
+         font-size: 18px;
+         font-weight: bold;
+         }
+         .product_price{
+         font-size: 18px;
+         font-weight: bold;
+         text-align: center;
+         }
+         .price_table{ 
+         display: table;
+         margin: 0 auto;
+         width: 100%;
+         }
+         .old_price ul{
+         float: right;
+         }
+         .new_price ul{
+         float: right;
+         }
+         .pay-btn{
+         float: right;
+         height: 30px;
+         margin-top: 10px;
+         }
+         .price_table a{
+          font-size: 22px;
+          padding: 8px;
+          float: right;
+          background-color: #5cb85c;
+          color: #fff !important;
+          height: 37px;
+          width: 37px;
+          border-radius: 2px;
+         }
+         @media only screen and (min-width: 768px) {
+         .price_table a{display: none !important;}
+         }
+         @media only screen and (max-width: 767px) {
+         .wrapper {margin-bottom: 50px;}
+         .offers-section {padding: 50px 0;}
+         .price_table button{ display: none;}
+         .product_name{font-size: 16px;}
+         .product_price{font-size: 16px;} 
+         .wrapper .heading h2{font-size: 22px;} 
+         .wrapper .heading{margin-bottom: 30px; padding: 15px 15px 0px 15px;}
+         .wrapper{width: 100%;}
+         }
+      </style>
+   </head>
+   <body>
+      <div class="main-container col1-layout">
+         <div class="main">
+            <div class="col-main">
+               <section class="offer-banmultivendor-marketplacener">
+                  <img class="img-responsive" alt="offer banner"
+                     src="<?= Yii::$app->request->baseUrl; ?>/images/offer/independencedaybanner.png">
+               </section>
+               <section class="offers-section">
+                  <div class="container">
+                     <div class="row magento-offers">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <div class="coupen-wrapper">
+                              <div class="wrapper">
+                                 <div class="heading">
+                                    <a href="#">
+                                       <h2>Discounts on Shopify Apps exclusively for Independence day</h2>
+                                    </a>
+                                    <p></p>
+                                 </div>
+                                 <a href="https://apps.cedcommerce.com/marketplace-integration/payment/combo/payment" target="_blank">
+                                    <div class="image-wrapper">
+                                       <img class="img-responsive" alt="coupen-image"
+                                          src="<?= Yii::$app->request->baseUrl; ?>/images/offer/combo-banner.jpg">
+                                    </div>
+                                 </a>
+                                 <div class="content-wrapper">
+                                    <p>Hurry up, LIMITED PERIOD ONLY! </p>
+                                    <p>Discount Offers on Shopify Apps will last from 13th - 17th of August.
+                                       Save upto $50* on Individual Apps!</p>
+                                    <p>The offer is valid on all of our Shopify Multi Channel Sales Apps.
+                                       Get your business geared for festive season sales.
+                                    </p>
+                                    <!-- <div class="coupon-code-wrap">
+                                       <span class="cupon-code-span"><strong>Grab the 5+1 Offer at </strong></span>
+                                       <span class="price">$16/mo</span>
+                                       </div> -->
+                                    <a href="#" class="read">read more</a> 
+                                 </div>
+                                 <div class="bs-example">
+                                    <div class="panel-group" id="accordion">
+                                       <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                             <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span> Explore More..</a>
+                                             </h4>
+                                          </div>
+                                          <div id="collapseOne" class="panel-collapse collapse">
+                                             <div class="panel-body">
+                                                <div class="price_table">
+                                                   <!--  <div class="row">
+                                                      <div class="col-sm-9 col-lg-9 col-md-9 col-xs-6">
+                                                       <h2 class="product_name">Our Product</h2>
+                                                       <ul>
+                                                         <li class="first">Walmart</li>
+                                                         <li>Jet-New</li>
+                                                         <li>Newegg</li>
+                                                         <li>Newegg Canada</li>
+                                                         <li>Sears</li>
+                                                         <li>Wish</li>
+                                                         <li>Bonanza</li>
+                                                         <li>Pricefalls</li>
+                                                         <li>BestBuy Ca</li>
+                                                         <li>Walmart Ca</li>
+                                                         <li>Etsy</li>
+                                                       </ul>
+                                                      </div>
+                                                      <div class="col-sm-3 col-lg-3 col-md-3 col-xs-6">
+                                                      <h2 class="product_price">Our Price</h2>
+                                                      <div class="row">
+                                                       <div class="col-sm-6 col-lg-6 old_price">
+                                                         <ul>
+                                                         <li><strike>$360</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$360</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$299</strike></li>
+                                                         <li><strike>$400</strike></li>
+                                                         <li><strike>$400</strike></li>
+                                                         <li><strike>$400</strike></li>
+                                                        
+                                                       </ul>
+                                                       </div>
+                                                       <div class="col-sm-6 col-lg-6 new_price">
+                                                         <ul>
+                                                         <li>$330</li>
+                                                         <li>$270</li>
+                                                         <li>$270</li>
+                                                         <li>$270</li>
+                                                         <li>$270</li>
+                                                         <li>$330</li>
+                                                         <li>$250</li>
+                                                         <li>$250</li>
+                                                         <li>$360</li>
+                                                         <li>$360</li>
+                                                         <li>$360</li>
+                                                       </ul>
+                                                       </div>
+                                                      </div>
+                                                      </div>    
+                                                      </div> -->
+                                                   <div class="row price_head">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <h2 class="product_name">Our Product</h2>
+                                                      </div>
+                                                      <div class="col-sm-4 col-lg-4 col-md-4 col-xs-6">
+                                                         <h2 class="product_price">Our Price</h2>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Walmart</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$360</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$330</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Jet</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$270</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Newegg</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$270</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Newegg Canada</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$270</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Sears</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$270</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Wish</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$360</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$330</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Bonanza</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$250</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Pricefalls</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$299</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$250</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>BestBuy Ca</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$400</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$360</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Walmart Ca</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$400</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$360</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                   <div class="row">
+                                                      <div class="col-sm-8 col-lg-8 col-md-8 col-xs-6">
+                                                         <ul>
+                                                            <li>Etsy</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 old_price">
+                                                         <ul>
+                                                            <li><strike>$400</strike></li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-1 col-lg-1 col-md-1 col-xs-2 new_price">
+                                                         <ul>
+                                                            <li>$400</li>
+                                                         </ul>
+                                                      </div>
+                                                      <div class="col-sm-2 col-lg-2 col-md-2 col-xs-2">
+                                                         <button type="button" class="btn btn-success pay-btn">Pay Now</button>
+                                                         <a href="#" class="fa fa-shopping-cart"></a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                           <div class="coupen-wrapper">
+                              <div class="wrapper">
+                                 <div class="heading">
+                                    <a href="#">
+                                       <h2>Get Discounts on Shopify App with Combo Pricing Plans</h2>
+                                    </a>
+                                    <p></p>
+                                 </div>
+                                 <a href="https://docs.google.com/forms/d/1YPIZ-S3Q_5EwjGWSpgScR-OU0R9YKQQDsdxSXIKPrO4/edit?ts=5b2b5611" target="_blank">
+                                    <div class="image-wrapper">
+                                       <img class="img-responsive" alt="coupen-image"
+                                          src="<?= Yii::$app->request->baseUrl; ?>/images/offer/shopify-banner.jpg">
+                                    </div>
+                                 </a>
+                                 <div class="content-wrapper">
+                                    <!-- <h2>Create your Shopify store through us-</h2> -->
+                                    <p>Choose ANY FIVE of your favorite Integration Apps for Shopify store in just $1000.
+                                       Get Fruugo Marketplace Integration App FREE with Shopify Combo pricing Plan. 
+                                       You also get 24*7 customer support for an entire year. 
+ 
+                                    </p>
+                                    <a href="#" class="read2">read more</a>
+                                    <div class="coupon-code-wrap">
+                                       <span class="cupon-code-span"><strong>Shopify Store Setup </strong></span>
+                                       <span class="price">Free</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="text/javascript">
+         $(document).ready(function(){
+         // Add minus icon for collapse element which is open by default
+         $(".collapse.in").each(function(){
+         $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+         }); 
+         // Toggle plus minus icon on show hide of collapse element
+         $(".collapse").on('show.bs.collapse', function(){
+         $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+         }).on('hide.bs.collapse', function(){
+         $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+         });
+         });
+      </script>
+   </body>
+</html>
+

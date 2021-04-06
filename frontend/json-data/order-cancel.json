@@ -1,0 +1,607 @@
+{
+  "id": 1054577524817,
+  "email": "manu@manulaude.com",
+  "closed_at": null,
+  "created_at": "2019-08-20T01:25:34-04:00",
+  "updated_at": "2019-08-21T06:44:26-04:00",
+  "number": 113,
+  "note": "",
+  "token": "8e9712640f92f6d9e0ac4574a41c0e18",
+  "gateway": "Etsy",
+  "test": false,
+  "total_price": "4.00",
+  "subtotal_price": "4.00",
+  "total_weight": 0,
+  "total_tax": "0.00",
+  "taxes_included": false,
+  "currency": "USD",
+  "financial_status": "refunded",
+  "confirmed": true,
+  "total_discounts": "36.00",
+  "total_line_items_price": "40.00",
+  "cart_token": null,
+  "buyer_accepts_marketing": false,
+  "name": "#1113",
+  "referring_site": null,
+  "landing_site": null,
+  "cancelled_at": "2019-08-21T06:44:26-04:00",
+  "cancel_reason": "inventory",
+  "total_price_usd": "4.00",
+  "checkout_token": null,
+  "reference": null,
+  "user_id": null,
+  "location_id": null,
+  "source_identifier": null,
+  "source_url": null,
+  "processed_at": "2019-08-20T01:25:34-04:00",
+  "device_id": null,
+  "phone": null,
+  "customer_locale": null,
+  "app_id": 2438651,
+  "browser_ip": null,
+  "landing_site_ref": null,
+  "order_number": 1113,
+  "discount_applications": [
+    {
+      "type": "manual",
+      "value": "36.0",
+      "value_type": "fixed_amount",
+      "allocation_method": "across",
+      "target_selection": "all",
+      "target_type": "line_item",
+      "description": "Custom discount",
+      "title": "Custom discount"
+    }
+  ],
+  "discount_codes": [
+    {
+      "code": "Custom discount",
+      "amount": "36.00",
+      "type": "fixed_amount"
+    }
+  ],
+  "note_attributes": [
+    {
+      "name": "ETSY Order",
+      "value": "1498316535"
+    }
+  ],
+  "payment_gateway_names": [
+    "Etsy"
+  ],
+  "processing_method": "",
+  "checkout_id": null,
+  "source_name": "2438651",
+  "fulfillment_status": null,
+  "tax_lines": [],
+  "tags": "1498316535, Cedcommerce Etsy integration, etsy.com",
+  "contact_email": "manu@manulaude.com",
+  "order_status_url": "https://dev-seller.myshopify.com/1918992496/orders/8e9712640f92f6d9e0ac4574a41c0e18/authenticate?key=ba79ad8651e7b91ffa3bc07ea3803b61",
+  "presentment_currency": "USD",
+  "total_line_items_price_set": {
+    "shop_money": {
+      "amount": "40.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "40.00",
+      "currency_code": "USD"
+    }
+  },
+  "total_discounts_set": {
+    "shop_money": {
+      "amount": "36.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "36.00",
+      "currency_code": "USD"
+    }
+  },
+  "total_shipping_price_set": {
+    "shop_money": {
+      "amount": "0.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "0.00",
+      "currency_code": "USD"
+    }
+  },
+  "subtotal_price_set": {
+    "shop_money": {
+      "amount": "4.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "4.00",
+      "currency_code": "USD"
+    }
+  },
+  "total_price_set": {
+    "shop_money": {
+      "amount": "4.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "4.00",
+      "currency_code": "USD"
+    }
+  },
+  "total_tax_set": {
+    "shop_money": {
+      "amount": "0.00",
+      "currency_code": "USD"
+    },
+    "presentment_money": {
+      "amount": "0.00",
+      "currency_code": "USD"
+    }
+  },
+  "total_tip_received": "0.0",
+  "admin_graphql_api_id": "gid://shopify/Order/1054577524817",
+  "line_items": [
+    {
+      "id": 2303601573969,
+      "variant_id": 12405502541936,
+      "title": "8.4 UVO Skis",
+      "quantity": 1,
+      "sku": "ced_12405502541936",
+      "variant_title": "172cm",
+      "vendor": "Volkl454",
+      "fulfillment_service": "manual",
+      "product_id": 1352998289520,
+      "requires_shipping": true,
+      "taxable": true,
+      "gift_card": false,
+      "name": "8.4 UVO Skis - 172cm",
+      "variant_inventory_management": "shopify",
+      "properties": [],
+      "product_exists": true,
+      "fulfillable_quantity": 0,
+      "grams": 11339,
+      "price": "20.00",
+      "total_discount": "0.00",
+      "fulfillment_status": null,
+      "price_set": {
+        "shop_money": {
+          "amount": "20.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "20.00",
+          "currency_code": "USD"
+        }
+      },
+      "total_discount_set": {
+        "shop_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        }
+      },
+      "discount_allocations": [
+        {
+          "amount": "18.00",
+          "discount_application_index": 0,
+          "amount_set": {
+            "shop_money": {
+              "amount": "18.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "18.00",
+              "currency_code": "USD"
+            }
+          }
+        }
+      ],
+      "admin_graphql_api_id": "gid://shopify/LineItem/2303601573969",
+      "tax_lines": []
+    },
+    {
+      "id": 2303601606737,
+      "variant_id": 12405502574704,
+      "title": "8.4 UVO Skis",
+      "quantity": 1,
+      "sku": "ced_12405502574704",
+      "variant_title": "177cm",
+      "vendor": "Volkl454",
+      "fulfillment_service": "manual",
+      "product_id": 1352998289520,
+      "requires_shipping": true,
+      "taxable": true,
+      "gift_card": false,
+      "name": "8.4 UVO Skis - 177cm",
+      "variant_inventory_management": null,
+      "properties": [],
+      "product_exists": true,
+      "fulfillable_quantity": 0,
+      "grams": 11339,
+      "price": "20.00",
+      "total_discount": "0.00",
+      "fulfillment_status": null,
+      "price_set": {
+        "shop_money": {
+          "amount": "20.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "20.00",
+          "currency_code": "USD"
+        }
+      },
+      "total_discount_set": {
+        "shop_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        }
+      },
+      "discount_allocations": [
+        {
+          "amount": "18.00",
+          "discount_application_index": 0,
+          "amount_set": {
+            "shop_money": {
+              "amount": "18.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "18.00",
+              "currency_code": "USD"
+            }
+          }
+        }
+      ],
+      "admin_graphql_api_id": "gid://shopify/LineItem/2303601606737",
+      "tax_lines": []
+    }
+  ],
+  "shipping_lines": [
+    {
+      "id": 852835500113,
+      "title": "Standard Shipping",
+      "price": "0.00",
+      "code": "Standard Shipping",
+      "source": "Etsy",
+      "phone": null,
+      "requested_fulfillment_service_id": null,
+      "delivery_category": null,
+      "carrier_identifier": null,
+      "discounted_price": "0.00",
+      "price_set": {
+        "shop_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        }
+      },
+      "discounted_price_set": {
+        "shop_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        },
+        "presentment_money": {
+          "amount": "0.00",
+          "currency_code": "USD"
+        }
+      },
+      "discount_allocations": [],
+      "tax_lines": []
+    }
+  ],
+  "billing_address": {
+    "first_name": "Manu",
+    "address1": "2910 Durand Drive",
+    "phone": null,
+    "city": "Los Angeles",
+    "zip": "90068",
+    "province": "California",
+    "country": "United States",
+    "last_name": "Laude",
+    "address2": "",
+    "company": null,
+    "latitude": 34.1218119,
+    "longitude": -118.3238896,
+    "name": "Manu Laude",
+    "country_code": "US",
+    "province_code": "CA"
+  },
+  "shipping_address": {
+    "first_name": "Manu",
+    "address1": "2910 Durand Drive",
+    "phone": null,
+    "city": "Los Angeles",
+    "zip": "90068",
+    "province": "California",
+    "country": "United States",
+    "last_name": "Laude",
+    "address2": "",
+    "company": null,
+    "latitude": 34.1218119,
+    "longitude": -118.3238896,
+    "name": "Manu Laude",
+    "country_code": "US",
+    "province_code": "CA"
+  },
+  "fulfillments": [],
+  "refunds": [
+    {
+      "id": 61950296145,
+      "order_id": 1054577524817,
+      "created_at": "2019-08-21T06:44:26-04:00",
+      "note": null,
+      "user_id": 23520346224,
+      "processed_at": "2019-08-21T06:44:26-04:00",
+      "restock": true,
+      "admin_graphql_api_id": "gid://shopify/Refund/61950296145",
+      "refund_line_items": [
+        {
+          "id": 71078805585,
+          "quantity": 1,
+          "line_item_id": 2303601573969,
+          "location_id": 6124404848,
+          "restock_type": "cancel",
+          "subtotal": 2,
+          "total_tax": 0,
+          "subtotal_set": {
+            "shop_money": {
+              "amount": "2.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "2.00",
+              "currency_code": "USD"
+            }
+          },
+          "total_tax_set": {
+            "shop_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            }
+          },
+          "line_item": {
+            "id": 2303601573969,
+            "variant_id": 12405502541936,
+            "title": "8.4 UVO Skis",
+            "quantity": 1,
+            "sku": "ced_12405502541936",
+            "variant_title": "172cm",
+            "vendor": "Volkl454",
+            "fulfillment_service": "manual",
+            "product_id": 1352998289520,
+            "requires_shipping": true,
+            "taxable": true,
+            "gift_card": false,
+            "name": "8.4 UVO Skis - 172cm",
+            "variant_inventory_management": "shopify",
+            "properties": [],
+            "product_exists": true,
+            "fulfillable_quantity": 0,
+            "grams": 11339,
+            "price": "20.00",
+            "total_discount": "0.00",
+            "fulfillment_status": null,
+            "price_set": {
+              "shop_money": {
+                "amount": "20.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "20.00",
+                "currency_code": "USD"
+              }
+            },
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              }
+            },
+            "discount_allocations": [
+              {
+                "amount": "18.00",
+                "discount_application_index": 0,
+                "amount_set": {
+                  "shop_money": {
+                    "amount": "18.00",
+                    "currency_code": "USD"
+                  },
+                  "presentment_money": {
+                    "amount": "18.00",
+                    "currency_code": "USD"
+                  }
+                }
+              }
+            ],
+            "admin_graphql_api_id": "gid://shopify/LineItem/2303601573969",
+            "tax_lines": []
+          }
+        },
+        {
+          "id": 71078838353,
+          "quantity": 1,
+          "line_item_id": 2303601606737,
+          "location_id": 6124404848,
+          "restock_type": "cancel",
+          "subtotal": 2,
+          "total_tax": 0,
+          "subtotal_set": {
+            "shop_money": {
+              "amount": "2.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "2.00",
+              "currency_code": "USD"
+            }
+          },
+          "total_tax_set": {
+            "shop_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            },
+            "presentment_money": {
+              "amount": "0.00",
+              "currency_code": "USD"
+            }
+          },
+          "line_item": {
+            "id": 2303601606737,
+            "variant_id": 12405502574704,
+            "title": "8.4 UVO Skis",
+            "quantity": 1,
+            "sku": "ced_12405502574704",
+            "variant_title": "177cm",
+            "vendor": "Volkl454",
+            "fulfillment_service": "manual",
+            "product_id": 1352998289520,
+            "requires_shipping": true,
+            "taxable": true,
+            "gift_card": false,
+            "name": "8.4 UVO Skis - 177cm",
+            "variant_inventory_management": null,
+            "properties": [],
+            "product_exists": true,
+            "fulfillable_quantity": 0,
+            "grams": 11339,
+            "price": "20.00",
+            "total_discount": "0.00",
+            "fulfillment_status": null,
+            "price_set": {
+              "shop_money": {
+                "amount": "20.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "20.00",
+                "currency_code": "USD"
+              }
+            },
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "USD"
+              }
+            },
+            "discount_allocations": [
+              {
+                "amount": "18.00",
+                "discount_application_index": 0,
+                "amount_set": {
+                  "shop_money": {
+                    "amount": "18.00",
+                    "currency_code": "USD"
+                  },
+                  "presentment_money": {
+                    "amount": "18.00",
+                    "currency_code": "USD"
+                  }
+                }
+              }
+            ],
+            "admin_graphql_api_id": "gid://shopify/LineItem/2303601606737",
+            "tax_lines": []
+          }
+        }
+      ],
+      "transactions": [
+        {
+          "id": 1247969574993,
+          "order_id": 1054577524817,
+          "kind": "refund",
+          "gateway": "Etsy",
+          "status": "success",
+          "message": "Refunded 4.00 from manual gateway",
+          "created_at": "2019-08-21T06:44:25-04:00",
+          "test": false,
+          "authorization": null,
+          "location_id": null,
+          "user_id": null,
+          "parent_id": 1246271897681,
+          "processed_at": "2019-08-21T06:44:25-04:00",
+          "device_id": null,
+          "receipt": [],
+          "error_code": null,
+          "source_name": "web",
+          "amount": "4.00",
+          "currency": "USD",
+          "admin_graphql_api_id": "gid://shopify/OrderTransaction/1247969574993"
+        }
+      ],
+      "order_adjustments": []
+    }
+  ],
+  "customer": {
+    "id": 1500320661585,
+    "email": "manu@manulaude.com",
+    "accepts_marketing": false,
+    "created_at": "2019-08-20T01:05:00-04:00",
+    "updated_at": "2019-08-21T06:44:26-04:00",
+    "first_name": "Manu",
+    "last_name": "Laude",
+    "orders_count": 4,
+    "state": "disabled",
+    "total_spent": "12.00",
+    "last_order_id": 1054577524817,
+    "note": null,
+    "verified_email": true,
+    "multipass_identifier": null,
+    "tax_exempt": false,
+    "phone": null,
+    "tags": "",
+    "last_order_name": "#1113",
+    "currency": "USD",
+    "accepts_marketing_updated_at": "2019-08-20T01:05:01-04:00",
+    "marketing_opt_in_level": null,
+    "admin_graphql_api_id": "gid://shopify/Customer/1500320661585",
+    "default_address": {
+      "id": 1522902171729,
+      "customer_id": 1500320661585,
+      "first_name": "Manu",
+      "last_name": "Laude",
+      "company": null,
+      "address1": "2910 Durand Drive",
+      "address2": "",
+      "city": "Los Angeles",
+      "province": "California",
+      "country": "United States",
+      "zip": "90068",
+      "phone": null,
+      "name": "Manu Laude",
+      "province_code": "CA",
+      "country_code": "US",
+      "country_name": "United States",
+      "default": true
+    }
+  },
+  "shopName": "dev-seller.myshopify.com",
+  "topic": "oldapps_order_cancel",
+  "log_name": 1054577524817,
+  "triggred_from_app": "",
+  "merchant_id": "25",
+  "db_name": "db",
+  "app_name": "jet"
+}

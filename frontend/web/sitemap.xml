@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+  <url>
+    <loc>https://apps.cedcommerce.com</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- jet marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/jet</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/jet/faq</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/jet/paymentplan</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- walmart marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/walmart</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/walmart/sell-on-walmart</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/walmart/help</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/walmart/blog</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/walmart/pricing</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- newegg-marketplace-->
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/neweggmarketplace</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/neweggmarketplace/sell-on-newegg</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- sears marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/sears</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/sears/paymentplan</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/sears/sell-on-sears</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- newegg-marketplace canada -->
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/neweggcanada</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://apps.cedcommerce.com/integration/neweggcanada/sell-on-newegg</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- bonanza marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/bonanza</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- fruugo marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/fruugo</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- tophatter marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/tophatter</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <!-- pricefalls marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/pricefalls</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- wish marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/wish/site/login</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- bestbuy ca marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/bestbuyca</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Walmart ca marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/walmart-canada/site/login?cedcommerce</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- etsy marketplace -->
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/etsy/site/login?cedcommerce</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://apps.cedcommerce.com/marketplace-integration/etsy/pricing</loc>
+    <lastmod>2017-12-18T10:13:37+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+  </url>
+</urlset>

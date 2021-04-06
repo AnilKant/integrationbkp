@@ -1,0 +1,46 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+
+/* @var $this yii\web\View */
+/* @var $model backend\models\Callschedule */
+
+$this->title = $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Callschedules', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="callschedule-view">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+        <div class="grid-view">
+        <div class="btn-left-set">
+        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?/*= Html::a('Delete', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Are you sure you want to delete this item?',
+                'method' => 'post',
+            ],
+        ]) */?>
+         </div>
+    
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'merchant_id',
+            'number',
+            'shop_url:url',
+            'marketplace',
+            'status',
+            'time',
+            'no_of_request',
+            'time_zone',
+            'preferred_timeslot',
+            'response',
+        ],
+    ]) ?>
+    </div>
+
+</div>

@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light_0-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium_0-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-medium_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular_0-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold_0-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+.shopify-integration{
+    
+    font-family: 'ralewaylight';
+    /*background: radial-gradient(circle farthest-side at 395px 483px, rgb(34, 0, 207) 0%, rgb(172, 0, 215) 74.2%, rgb(130, 6, 255) 83.3%);
+    background: -webkit-radial-gradient(circle farthest-side at 395px 483px, rgb(34, 0, 207) 0%, rgb(172, 0, 215) 74.2%, rgb(130, 6, 255) 83.3%);
+    background: -o-radial-gradient(circle farthest-side at 395px 483px, rgb(34, 0, 207) 0%, rgb(172, 0, 215) 74.2%, rgb(130, 6, 255) 83.3%);
+    background: -moz-radial-gradient(circle farthest-side at 395px 483px, rgb(34, 0, 207) 0%, rgb(172, 0, 215) 74.2%, rgb(130, 6, 255) 83.3%);*/
+}
+.shopify-integration .common-info {
+    margin-top: 50px;
+    width: 75%;
+    text-align: justify;
+}
+.owl-dots {
+    display: none;
+}
+.shopify-integration .Integrations {
+    background-image: url("../images/11-2.png");
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    padding-bottom: 75px;
+    background-size: 240px auto;
+}
+.logo-section .logo-img {
+    display: block;
+    margin: 0px 20px 30px 0;
+    width: 100%;
+}
+.intro-section {
+    display: block;
+    min-height: 250px;
+    padding: 20px;
+}
+.intro-section .intro-section-inner {
+    margin-top: 30px;
+}
+.shopify-heading{
+    color: #fff;
+    font-size: 30px;
+    font-family: 'ralewaymedium';
+}
+.info{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 30px;
+    font-weight: normal;
+}
+#bottom-next {
+  color: #fff;
+  display: block;
+  left: 50%;
+  position: fixed;
+  bottom: 50px;
+}
+.down-arrow {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    width: 30px;
+}
+.down-arrow i {
+    font-size: 18px;
+    font-weight: bold;
+}
+.common-info .info{
+    font-size: 18px;
+    padding-right: 15px;
+}
+.Integrations .boxes{
+    border-radius: 8px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    height: 125px;
+    margin-left: 12px;
+    padding: 10px;
+    text-align: center;
+    width: 125px;
+   -webkit-transition: all .3s ease-out;
+   -moz-transition: all .3s ease-out;
+   -o-transition: all .3s ease-out;
+   transition: all .3s ease-out;
+}
+.Integrations .boxes:hover{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=2, M12=-0, M21=0, M22=2);
+}
+.Integrations .boxes.jet{
+    background: #8200FF;
+}
+.Integrations .boxes.walmart{
+    background: #007DC6;
+}
+.Integrations .boxes.newegg{
+    background: #F9B400;
+}
+.Integrations .boxes .image {
+    margin-top: 25px;
+    min-height: 55px;
+}
+.review-section .shopify-heading {
+    margin-bottom: 30px;
+}
+.review-section .integration-caption {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0 3px;
+    color: #038884;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 18px;
+}
+.Integrations .boxes .button {
+    background: #fff none repeat scroll 0 0;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.Integrations .boxes .image img {
+    width: 80%;
+}
+figure figcaption span {
+    display: block;
+    margin-top: 35px !important;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+.shopify-integration .footer {
+  margin-bottom: 0;
+  margin-top: 60px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.shopify-integration .footer .footer-links .links {
+    text-decoration: none;
+}
+.shopify-integration .footer .footer-links .links span {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+.gradient-bg{
+    background-attachment: fixed;
+    /*background: rgba(0, 0, 0, 0) radial-gradient(circle farthest-side at 395px 483px , rgb(34, 0, 207) 0%, rgb(172, 0, 215) 74.2%, rgb(130, 6, 255) 83.3%) repeat scroll 0 0 !important;*/
+    /*background: linear-gradient(45deg, hsla(162, 88%, 43%, 1) 0%, hsla(162, 88%, 43%, 0) 70%) repeat scroll 0 0%, linear-gradient(135deg, hsla(227, 87%, 53%, 1) 10%, hsla(227, 87%, 53%, 0) 80%) repeat scroll 0 0%, linear-gradient(225deg, hsla(248, 76%, 46%, 1) 10%, hsla(248, 76%, 46%, 0) 80%) repeat scroll 0 0%, rgba(0, 0, 0, 0) linear-gradient(315deg, hsla(279, 80%, 47%, 1) 100%, hsla(279, 80%, 47%, 0) 70%) repeat scroll 0 0;*/
+    /* IE10+ */ 
+ 
+    background: linear-gradient(195deg, rgba(43,255,188,1) 0%, rgba(0,128,128,1) 100%);
+}
+.fullpage-wrapper .section {
+    background: transparent none repeat scroll 0 0 !important;
+}
+.review-section{
+    color: #fff;
+}
+.review-section a {
+    color: #fff;
+}
+
+.review-section .caption{
+    text-align: right;
+}
+.review-section .owl-carousel .name {
+    font-family: ralewaybold;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.caption.pull-right {
+    font-size: 15px;
+    margin-top: 20px;
+}
+.review-section .owl-carousel .review {
+  line-height: 27px;
+  font-size: 16px;
+}
+.review-section .owl-carousel .left::before {
+    content: "\f10d";
+    display: inline-block;
+    font-family: fontawesome;
+    font-size: 40px;
+}
+.review-section .owl-carousel .right::after {
+    content: "\f10e";
+    display: inline-block;
+    font-family: fontawesome;
+    font-size: 40px;
+    float: right;
+}
+
+.review-section .owl-carousel img {
+    border-radius: 50%;
+    height: 110px;
+    margin-top: 65px;
+    width: 110px;
+}
+
+.wrapper{
+    display: table;
+    width: 100%;
+}
+.wrapper .inner-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+.contactus-section .contacts > h3 {
+  color: #fff;
+  margin-bottom: 50px;
+}
+.contactus-section .contacts label {
+  color: #fff;
+  font-size: 14px;
+  display: none;
+}
+.contactus-section .contacts .input-fields {
+    background: transparent none repeat scroll 0 0;
+    border: 1px solid #fff;
+    display: block;
+    margin: 25px 0;
+    width: 100%;
+    color: #ffffff !important;
+    padding: 8px;
+    -webkit-text-fill-color: #fff;
+}
+
+.contactus-section .contacts button {
+    background: #fff none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 1px;
+    color: #000;
+    padding: 5px 25px;
+}
+.owl-prev , .owl-next{
+    background-color: #fff !important;
+    background-size: 53px auto !important;
+    border-radius: 0 !important;
+    height: 25px;
+    text-indent: -2000px;
+    width: 25px;
+}
+.owl-nav {
+    margin-top: 30px !important;
+}
+.owl-nav .owl-prev{
+    background-image: url("../images/owl-icons.png") !important;
+    background-position: 4px 2px !important;
+}
+.owl-nav .owl-next{
+    background-image: url("../images/owl-icons.png") !important;
+    background-position: 27px 2px !important;
+}
+.review-section .wrap::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .shopify-integration .common-info, .contactus-section, .review-section {
+        margin: 0 auto;
+        text-align: justify;
+        width: 90%;
+    }
+    .shopify-integration .Integrations, .footer{
+        text-align: center;
+    }
+    .shopify-integration .Integrations .grid{
+        margin: 0 auto;
+        text-align: left;
+    }
+    .review-section .owl-carousel img {
+        width: 120px;
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .shopify-integration .Integrations{
+        padding-bottom: 0;
+    }
+    .shopify-integration .footer .footer-links .links span {
+        font-size: 10px;
+        margin-right: 10px;
+    }
+    .shopify-integration .Integrations .grid{
+        width: 100%;
+        padding: 0;
+    }
+    .shopify-integration .common-info .info {
+        font-size: 15px;
+        line-height: 26px;
+    }
+    .shopify-heading {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+}
+
+.shopify-integration .review-section .owl-nav {
+  bottom: -37px;
+  float: right;
+  position: absolute;
+  right: 3px;
+  text-indent: -181px;
+}

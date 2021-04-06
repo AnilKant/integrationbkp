@@ -1,0 +1,509 @@
+/*=================================================
+=            Section comment Loader Animation            =
+=================================================*/
+
+#LoadingMSG{
+	display:none;
+}
+#LoadingMSG,#LoadingMSG img{
+	margin:0 auto;
+}
+.overlay{
+	background-color: rgba(0, 0, 0, 0.20);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+}
+.rejected {
+	color: #bd1500;
+}
+.overlay img{
+	position: relative;
+	top: 40%;
+}
+
+#fountainG{
+	position:relative;
+	width:390px;
+	height:47px;
+	margin:auto;
+	top: 45%;
+}
+
+.fountainG{
+	position:absolute;
+	top:0;
+	background-color:#222222);
+	width:47px;
+	height:47px;
+	animation-name:bounce_fountainG;
+	-o-animation-name:bounce_fountainG;
+	-ms-animation-name:bounce_fountainG;
+	-webkit-animation-name:bounce_fountainG;
+	-moz-animation-name:bounce_fountainG;
+	animation-duration:1.235s;
+	-o-animation-duration:1.235s;
+	-ms-animation-duration:1.235s;
+	-webkit-animation-duration:1.235s;
+	-moz-animation-duration:1.235s;
+	animation-iteration-count:infinite;
+	-o-animation-iteration-count:infinite;
+	-ms-animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-iteration-count:infinite;
+	animation-direction:normal;
+	-o-animation-direction:normal;
+	-ms-animation-direction:normal;
+	-webkit-animation-direction:normal;
+	-moz-animation-direction:normal;
+	transform:scale(.3);
+	-o-transform:scale(.3);
+	-ms-transform:scale(.3);
+	-webkit-transform:scale(.3);
+	-moz-transform:scale(.3);
+	border-radius:31px;
+	-o-border-radius:31px;
+	-ms-border-radius:31px;
+	-webkit-border-radius:31px;
+	-moz-border-radius:31px;
+}
+
+#fountainG_1{
+	left:0;
+	animation-delay:0.496s;
+	-o-animation-delay:0.496s;
+	-ms-animation-delay:0.496s;
+	-webkit-animation-delay:0.496s;
+	-moz-animation-delay:0.496s;
+}
+
+#fountainG_2{
+	left:49px;
+	animation-delay:0.6125s;
+	-o-animation-delay:0.6125s;
+	-ms-animation-delay:0.6125s;
+	-webkit-animation-delay:0.6125s;
+	-moz-animation-delay:0.6125s;
+}
+
+#fountainG_3{
+	left:98px;
+	animation-delay:0.739s;
+	-o-animation-delay:0.739s;
+	-ms-animation-delay:0.739s;
+	-webkit-animation-delay:0.739s;
+	-moz-animation-delay:0.739s;
+}
+
+#fountainG_4{
+	left:146px;
+	animation-delay:0.8655s;
+	-o-animation-delay:0.8655s;
+	-ms-animation-delay:0.8655s;
+	-webkit-animation-delay:0.8655s;
+	-moz-animation-delay:0.8655s;
+}
+
+#fountainG_5{
+	left:195px;
+	animation-delay:0.992s;
+	-o-animation-delay:0.992s;
+	-ms-animation-delay:0.992s;
+	-webkit-animation-delay:0.992s;
+	-moz-animation-delay:0.992s;
+}
+
+#fountainG_6{
+	left:244px;
+	animation-delay:1.1085s;
+	-o-animation-delay:1.1085s;
+	-ms-animation-delay:1.1085s;
+	-webkit-animation-delay:1.1085s;
+	-moz-animation-delay:1.1085s;
+}
+
+#fountainG_7{
+	left:293px;
+	animation-delay:1.235s;
+	-o-animation-delay:1.235s;
+	-ms-animation-delay:1.235s;
+	-webkit-animation-delay:1.235s;
+	-moz-animation-delay:1.235s;
+}
+
+#fountainG_8{
+	left:341px;
+	animation-delay:1.3615s;
+	-o-animation-delay:1.3615s;
+	-ms-animation-delay:1.3615s;
+	-webkit-animation-delay:1.3615s;
+	-moz-animation-delay:1.3615s;
+}
+
+
+/*=====  End of Section comment Animation  ======*/
+
+/*==========================================================
+=            Section comment Table scroller css            =
+==========================================================*/
+.swipe-left {
+  float: left;
+  left: 20px;
+  z-index: 9999;
+}
+.swipe-right {
+  float: right;
+  right: 20px;
+  z-index: 9999;
+}
+.swipe-right:hover span i, .swipe-left:hover span i {
+  background: #222222 none repeat scroll 0 0;
+  opacity: 1;
+}
+.swipe-right, .swipe-left {
+  top: 50%;
+  display: inline-block;
+  position: fixed;
+}
+.swipe-right span i, .swipe-left span i {
+  background-color: #000;
+  border: medium none;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  font-size: 11px;
+  height: 25px;
+  opacity: 0.3;
+  padding: 7px;
+  text-align: center;
+  width: 25px;
+}
+.ced-horizontal-scroll {
+  bottom: 0;
+  height: 20px;
+  left: 270px;
+  position: fixed;
+  right: 20px;
+  z-index: 9999;
+}
+.ced-horizontal-wrap {
+  width: 100%;
+}
+.ced-horizontal-wrap {
+  height: 20px;
+  overflow-x: scroll;
+  width: 100%;
+}
+.ced-horizontal-inner {
+  height: 20px;
+}
+.page-main .grid-view table {
+  position: relative;
+}
+/*=====  End of Section comment Table scroller css  ======*/
+
+/*===================================================
+=            Section comment General css            =
+===================================================*/
+body{
+	margin: 0!important;
+	background-color: #eeeeee!important;
+}
+#wrapper {
+  padding-left: 0!important;
+}
+.page-main h1 {
+  background-color: #ddd;
+  font-size: 22px;
+  margin: 0 0 10px;
+  padding: 12px;
+}
+.page-main{
+	padding-top: 50px!important;
+	background-color: #eeeeee;
+}
+.page-main .breadcrumb{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.page-main .list-page {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.page-main .summary {
+  margin-bottom: 10px;
+}
+.page-main .grid-view {
+  overflow: auto;
+  padding: 0 10px;
+}
+.page-main .breadcrumb ~ [class*="-index"],
+.page-main .breadcrumb ~ [class*="-view"],
+.page-main .breadcrumb ~ [class*="-update"] {
+  background-color: #ffffff;
+}
+.btn-right-set{
+  margin-right: 10px;
+}
+.btn-left-set{
+	margin-bottom: 10px;
+}
+/*=====  End of Section comment General css  ======*/
+
+
+/*=====================================================
+=            Section comment Naigation css            =
+=====================================================*/
+
+.call_schedule_count {
+  background-color: #dfdf20;
+  border-radius: 50%;
+  color: red;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 22px;
+  line-height: 22px;
+  margin-left: 20px;
+  text-align: center;
+  width: 22px;
+}
+.ced-navbar .dropdown-toggle > img {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+  width: 14px;
+}
+.ced-navbar-top .navbar-header .container {
+  width: 100%;
+}
+.ced-navbar-top .navbar-brand {
+  padding: 8px 15px;
+}
+.ced-navbar-top .navbar-brand img {
+  height: auto;
+  width: 120px;
+}
+.ced-navbar-top .navbar-header .navbar-right > li > a {
+  color: #fff;
+}
+.ced-navbar .nav.navbar-nav.side-nav {
+  background-color: #ffffff;
+  box-shadow: 0 0 4px 0 #dddddd;
+  left: 0;
+  margin: 0;
+  width: 250px;
+}
+.ced-navbar .dropdown ul.dropdown-menu {
+  background-color: #ebebeb;
+  border: 0 none;
+  border-radius: 0;
+  box-shadow: none;
+  position: static;
+  transition: all 300ms ease 0s;
+  width: 250px;
+}
+.ced-navbar .nav.navbar-nav.side-nav > li {
+  width: 100%;
+}
+.ced-navbar .dropdown.open > a {
+  background-color: #cdcdcd!important;
+  color: #333333!important;
+}
+.ced-navbar > ul.navbar-nav > li > a {
+  border-top: 1px solid #eeeeee;
+  color: #333333;
+  font-size: 14px;
+  padding: 10px 0 10px 20px;
+  width: 100%;
+}
+.ced-navbar > ul.navbar-nav > li > a:hover,
+.ced-navbar > ul.navbar-nav > li > a:focus  {
+  background-color: #dddddd!important;
+  color: #333333!important;
+  border-color: #dddddd;
+}
+
+.ced-navbar ul.navbar-nav > li a > i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+.ced-navbar .dropdown .dropdown-menu a {
+  color: #333;
+  font-size: 13px;
+  padding: 10px 0 10px 30px;
+}
+.ced-navbar .dropdown .dropdown-menu a:hover{
+	background-color: #cdcdcd!important;
+}
+.ced-navbar .caret {
+  position: absolute;
+  right: 25px;
+  top: 18px;
+}
+/*=====  End of Section comment Naigation css  ======*/
+
+/*=============================================================
+=            Section comment Order Report Page css            =
+=============================================================*/
+
+.failed-order-report .order_total_count {
+  margin-bottom: 20px;
+}
+.failed-order-header {
+  margin-bottom: 20px;
+}
+.failed-order-header .on-date,
+.failed-order-header .to-date {
+  display: inline-block;
+  margin: 0 20px 0 0;
+  vertical-align: top;
+}
+.failed-order-report .ready-count-data {
+  margin-top: 50px;
+}
+.failed-order-report .ready-count-data h3 {
+  background-color: #dddddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+}
+.order-report-index .failed-order-report a {
+  border: 1px solid #0bac31;
+  display: block;
+  text-decoration: none;
+}
+.order-report-index .failed-order-report .failed-count-data a {
+  border: 1px solid #bb321f;
+}
+.order-report-index .failed-count-data .dash-icon {
+  margin-top: 15px;
+}
+.order-report-index .outer_div.outer_div_live {
+  background-color: #fff;
+  padding: 15px 10px;
+}
+.order-report-index .dash-icon {
+  color: #fff;
+  display: inline-block;
+  margin-left: 10px;
+}
+.order-report-index .count-val {
+  color: #fff;
+  float: right;
+  font-size: 34px;
+  text-align: center;
+  width: 40px;
+}
+.order-report-index p.order-head {
+  color: #fff;
+  padding: 20px 10px;
+}
+/*=====  End of Section comment Order Report Page css  ======*/
+
+/*=================================================================
+=            Section comment Walmart page            =
+=================================================================*/
+.walmart-shop-details-index .pull-right.btn.btn-primary,
+.walmart-client-details-index .btn.btn-primary.pull-right {
+  margin-right: 10px;
+}
+.walmart-order-detail-index form > select {
+  display: inline-block;
+  width: 150px;
+}
+.walmart-order-detail-index form >.input-wrap {
+  display: inline-block;
+}
+.walmart-order-detail-index > form {
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+/*=====  End of Section comment Walmart page  ======*/
+
+/*=============================================
+=            Section comment Sears            =
+=============================================*/
+
+.sears-extension-detail-index form > select {
+  display: inline-block;
+  width: 150px;
+}
+.sears-extension-detail-index form > button.btn{
+	display: inline-block;
+}
+/*=====  End of Section comment Sears  ======*/
+
+/*======================================================
+=            Section comment Latest Updates            =
+======================================================*/
+
+.latest-updates-index .pull-right .btn.btn-primary {
+  margin-right: 10px;
+}
+
+/*=====  End of Section comment Latest Updates  ======*/
+
+/*====================================================
+=            Section comment Notification            =
+====================================================*/
+.common-notification-form {
+  padding: 10px;
+}
+/*=====  End of Section comment Notification  ======*/
+
+
+/*===================================================
+=            Section comment Media Query            =
+===================================================*/
+
+@media screen and (min-width:768px){
+	.page-main {
+  margin-left: 250px;
+  /*padding: 0 20px;*/
+  width: calc(100% - 250px);
+}
+.ced-navbar-top .navbar-header .navbar-collapse {
+  float: right;
+}
+.swipe-left {
+  left: 270px;
+}
+}
+@media screen and (max-width: 768px){
+	.page-main{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.page-main .grid-veiw{
+		border-color: 1px solid #eeeeee;
+	}
+  .ced-horizontal-scroll {
+  left: 20px;
+  }
+}
+/*=====  End of Section comment Media Query  ======*/
+
+
+.ced-navbar .dropdown-submenu {
+  position: relative;
+}
+.ced-navbar .dropdown-submenu .test:focus {
+  background-color: #B7B5B5 !important;
+}
+.dropdown-submenu .test {
+  padding-left: 40px !important;
+}
+.dropdown-submenu .dropdown-menu li a {
+  padding-left: 40px !important;
+  background-color: #CFCFCF;
+}
+.test + .dropdown-menu {
+  margin-top: 0;
+  padding: 0;
+}

@@ -1,0 +1,18 @@
+User-agent: *
+Disallow:
+# Directories
+Disallow: /css/*
+Disallow: /js/*
+Disallow: /images/*
+Disallow: /assets/*
+Disallow: /frontend/*
+Disallow: /fonts/*
+Disallow: /img/*
+Disallow: /fonts/*
+Disallow: /jet-policy/*
+Disallow: /newegg-policy/*
+Disallow: /sears-policy/*
+Disallow: /walmart-policy/*
+Disallow: /static/*
+
+Sitemap: https://apps.cedcommerce.com/sitemap.xml

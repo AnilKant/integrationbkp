@@ -1,0 +1,593 @@
+<?php
+use backend\assets\AppAsset;
+use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use backend\components\Data;
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+AppAsset::register($this);
+$calls = Data::sqlRecords('SELECT COUNT( `id` ) callnumber FROM `call_schedule` WHERE `status`="Pending"','one','select');
+$pendingCalls = isset($calls['callnumber'])?$calls['callnumber']:0;
+/*if($_SERVER['REMOTE_ADDR'] !== '103.97.184.162'){
+    header('Location: https://apps.cedcommerce.com/');
+}*/
+?>
+<?php $this->beginPage() ?>
+
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Custom CSS -->
+    <link href="<?= str_replace('/admin','',Yii::$app->request->baseUrl)?>/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="<?= str_replace('/admin','',Yii::$app->request->baseUrl)?>/css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="<?= str_replace('/admin','',Yii::$app->request->baseUrl)?>/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <?php $this->beginBody() ?>
+    <div id="wrapper">
+        <div id="LoadingMSG" style="display: none;" class="overlay">
+            <!-- <img src="/images/loading-large.gif"> -->
+            <div id="fountainG">
+                <div class="fountainG" id="fountainG_1"></div>
+                <div class="fountainG" id="fountainG_2"></div>
+                <div class="fountainG" id="fountainG_3"></div>
+                <div class="fountainG" id="fountainG_4"></div>
+                <div class="fountainG" id="fountainG_5"></div>
+                <div class="fountainG" id="fountainG_6"></div>
+                <div class="fountainG" id="fountainG_7"></div>
+                <div class="fountainG" id="fountainG_8"></div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="ced-navbar-top navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <?php
+                NavBar::begin([
+                    'brandLabel' => '<img src='.Yii::$app->request->baseUrl.'/images/logo.png height="180%" >',
+                    'brandUrl' => Yii::$app->request->baseUrl,
+                    'options' => [
+                        'class' => 'navbar-inverse navbar-fixed-top',
+                    ],
+                ]);
+                // $menuItems = [
+                //     ['label' => 'Home', 'url' => ['site/index']],
+                // ];
+
+                if (\Yii::$app->user->isGuest) {
+
+                    $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+                } else {
+                    $menuItems[] = ['label' => 'Pricing', 
+                    'items' => [
+                        ['label'=>'Custom Plan','url'=>['/payment/app-custom-payment/index']],
+                        ['label'=>'Pricing Plan','url'=>['/payment/app-pricing-plan/index']],
+                        ['label'=>'Pricing Features','url'=>['/payment/pricing-features/index']],
+                        ['label'=>'Combo Plan','url'=>['/payment/combo-pricing-plan/index']],
+                        ['label'=>'Combo Request Clients','url'=>['/payment/combo-payment/index']],
+                    ], 
+                ];
+                $menuItems[] = ['label' => 'Notifications', 'url' => ['/common-notification/index']];
+                $menuItems[] = ['label' => 'Calling', 'url' => ['callschedule/index']];
+                $menuItems[] = ['label' => 'Failed Orders', 'url' => ['/order-report/index']];
+                $menuItems[] = ['label' => 'Add FAQs', 
+                'items' => [
+                    ['label'=>'jet','url'=>['jet-faq/index']],
+                    ['label'=>'walmart','url'=>['walmart-faq/index']],
+                    ['label'=>'newegg','url'=>['newegg-faq/index']],
+                    ['label'=>'sears','url'=>['sears-faq/index']],
+                    ['label'=>'new-apps','url'=>['apps-faq/index']],
+                    /* ['label'=>'etsy-apps','url'=>['etsy-faq/index']],*/
+                    ['label'=>'walmartca-app','url'=>['walmartca-faqs/index']]
+                ],
+
+            ];
+                    $menuItems[] = ['label' => 'Latest Updates',
+                        'items' => [
+                            ['label' => 'New Apps', 'url' => ['apps-latest-updates/index']],
+                            ['label'=>'Old Apps','url'=>['latest-updates/index']],
+                        ],
+                    ];
+                    $menuItems[] = ['label' => 'Error Info NewApps',
+                        'items' => [
+                            ['label'=>'Notification','url'=>['newapps-error-notification/index']],
+                            ['label'=>'Description','url'=>['newapps-error-description/index']],
+                        ],
+                    ];
+        $menuItems[] = ['label' => 'Export CSV', 
+        'items' => [
+            ['label'=>'Jet','url'=>['/jetshopdetails/export']],
+            ['label' =>'Walmart', 'url' => ['/walmartshopdetails/export']],
+            ['label'=>'Bonanza','url'=>['/site/exportbonuser']],
+            ['label'=>'Newegg US','url'=>['/newegg-shop-detail/export']],
+            ['label'=>'Newegg CAN','url'=>['/newegg-can-shop-detail/export']],
+            ['label'=>'Etsy','url'=>['/etsy-shop-details/export']],
+            ['label'=>'Fruugo','url'=>['/fruugo-shop-details/export']],
+            ['label'=>'Wish','url'=>['/wishshopdetails/export']],
+            ['label'=>'Export Merchant','url'=>['/export-merchant-details/index']]
+        ],
+    ];
+    $menuItems[] = ['label' => 'Emails',
+    'items' => [
+        ['label'=>'Templates','url'=>['/reports/jet-email-template/index']],
+        ['label'=>'Reports','url'=>['reports/dashboard/index']]
+    ],
+];
+$menuItems[] = [
+    'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+    'url' => ['/site/logout'],
+    'linkOptions' => ['data-method' => 'post']
+];
+}
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'items' => $menuItems,
+]);
+NavBar::end();
+?>
+</div>
+
+<?php if (!\Yii::$app->user->isGuest) {?>
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="ced-navbar collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+
+                       <!--  <li >
+                            <a href="<?=Yii::$app->request->baseUrl;?>/site/index"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        </li> -->
+                       <!--  <li>
+                            <a href="<?=Yii::$app->request->baseUrl;?>/order-report/index"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Falied Orders</a>
+                        </li> -->
+                        <!-- <li>
+                            <a href="<?=Yii::$app->request->baseUrl;?>/callschedule/index"><i class="fa fa-phone" aria-hidden="true"></i>Call Schedule
+                            <span class="call_schedule_count"><?= $pendingCalls;?></span>
+                            </a>
+                        </li> -->
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/merchants.png' ?>">
+                            Merchants<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/newappmerchantdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i> New Apps</a>
+                                </li>
+
+                                <li>
+                                    <a href="<?= Yii::$app->request->baseUrl; ?>/oldappmerchantdetails/index"><i
+                                        class="fa fa-money" aria-hidden="true"></i> Old Apps</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= Yii::$app->request->baseUrl; ?>/shop-erasure-data/index"><i
+                                            class="fa fa-money" aria-hidden="true"></i> New Apps Deleted merchant</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?= Yii::$app->request->baseUrl; ?>/old-shop-erasure-data/index"><i
+                                                class="fa fa-money" aria-hidden="true"></i> Old Apps Deleted merchant</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/jet.png' ?>">
+                                        Jet<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a  href="<?=Yii::$app->request->baseUrl;?>/jetshopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i> Jet Shop Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?=Yii::$app->request->baseUrl;?>/jet-recurring-payment/index"><i class="fa fa-money" aria-hidden="true"></i> Jet Payment Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?=Yii::$app->request->baseUrl;?>/jetclientdetails/index"><i class="fa fa-phone" aria-hidden="true"></i> Jet Client Details</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?=Yii::$app->request->baseUrl;?>/jetfileupload/index"><i class="fa fa-file" aria-hidden="true"></i> Jet File Uploads</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/walmart.png' ?>">
+                                        Walmart<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                         <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/walmartshopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i> Walmart Shop Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/walmart-payment/index"><i class="fa fa-money" aria-hidden="true"></i> Walmart Payment Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/walmart-client/index"><i class="fa fa-phone" aria-hidden="true"></i> Walmart Client Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/walmartorderdetails/index"><i class="fa fa-bar-chart" aria-hidden="true"></i>Walmart Order Details</a>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="#"  class="test">Walmart Error Notification <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?inventory"><i class="fa fa-list-alt" aria-hidden="true"></i> Inventory Sync Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?product_delete"><i class="fa fa-list-alt" aria-hidden="true"></i> Product Delete Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?product_update"><i class="fa fa-list-alt" aria-hidden="true"></i> Product Update Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?product_create"><i class="fa fa-list-alt" aria-hidden="true"></i> Product Create Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?price_update"><i class="fa fa-list-alt" aria-hidden="true"></i> Price Update Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?sku_update"><i class="fa fa-list-alt" aria-hidden="true"></i> SKU Update Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?order_shipment"><i class="fa fa-list-alt" aria-hidden="true"></i> Order Shipment Error</a>
+                                                </li>
+                                                <li>
+                                                    <a href="<?=Yii::$app->request->baseUrl;?>/error-notification/index?marketplace_delete_error"><i class="fa fa-list-alt" aria-hidden="true"></i> Marketplace Product Delete</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/walmart-error-description/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Walmart Error Description</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/Walmart-ca.png' ?>">
+                                    Walmart Canada<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a  href="<?=Yii::$app->request->baseUrl;?>/walmartca-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                        </li> 
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/Rakuten.png' ?>">
+                                    Rakuten Marketplace<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a  href="<?=Yii::$app->request->baseUrl;?>/rakutenus-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                        </li> 
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/Rakuten-fr.png' ?>">Rakuten France<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a  href="<?=Yii::$app->request->baseUrl;?>/rakutenfr-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                        </li> 
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/newegg.png' ?>">
+                                    Newegg<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/newegg-shop-detail/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/newegg-client-detail/index"><i class="fa fa-user" aria-hidden="true"></i>Client Details</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/newegg-ca.png' ?>">
+                                    Newegg Canada<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/newegg-can-shop-detail/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?=Yii::$app->request->baseUrl;?>/newegg-can-client-detail/index"><i class="fa fa-user" aria-hidden="true"></i>Client Details</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/sears.png' ?>">
+                                    Sears<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                     <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/searsextensiondetail/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/sears-client-detail/index"><i class="fa fa-user" aria-hidden="true"></i>Client Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/sears-recurring-payment/index"><i class="fa fa-money" aria-hidden="true"></i>Payment Details</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/kit.png' ?>">
+                                Kit<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/kit-skill-conversation/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Skill Conversation</a>
+                                    </li>
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/kit-trigger-failed-response/index"><i class="fa fa-user" aria-hidden="true"></i>Failed Skills</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/fruggo.png' ?>">
+                                Fruugo<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                 <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/fruugo-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li>
+                                <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/fruugo-client-detail/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Client Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/tophatter.png' ?>">
+                            Tophatter<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/tophattershopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/bonanza.png' ?>">
+                            Bonanza<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?=Yii::$app->request->baseUrl;?>/bonanzashopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li>
+                                <li>
+                                    <a href="<?=Yii::$app->request->baseUrl;?>/bonanza-payment/index"><i class="fa fa-money" aria-hidden="true"></i>Payment Details</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/pricefalls.png' ?>">
+                            Pricefalls<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/pricefallsshopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li> 
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/bestbuy.png' ?>">
+                                Bestbuy Canada<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/bestbuyca-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/wish.png' ?>">
+                                Wish<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="<?=Yii::$app->request->baseUrl;?>/wishshopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/etsy.png' ?>">
+                                Etsy<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a  href="<?=Yii::$app->request->baseUrl;?>/etsy-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                    </li>
+                                    <li>
+                                        <a  href="<?=Yii::$app->request->baseUrl;?>/etsy-payment/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Payment Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/catch.png' ?>">
+                                Catch<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a  href="<?=Yii::$app->request->baseUrl;?>/catch-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                    </li>
+                                <!-- <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/etsy-payment/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Payment Details</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/reverb.png' ?>">
+                            Reverb<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/reverb-shop-details/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li>
+                                <!-- <li>
+                                    <a  href="<?=Yii::$app->request->baseUrl;?>/etsy-payment/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Payment Details</a>
+                                </li> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/groupon.png' ?>" alt="Groupon Shop Details">
+                            Groupon<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?=Yii::$app->request->baseUrl;?>/grouponshopdetails/index"><i class="fa fa-list-alt" aria-hidden="true"></i>Shop Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--<li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <img src="<?/*= Yii::$app->request->baseUrl . '/images/sidebar/magento.png' */?>">
+                            Magento<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?/*=Yii::$app->request->baseUrl;*/?>/magentoextensiondetail/index"><i class="fa fa-user-circle" aria-hidden="true"></i>Clients</a>
+                                </li>
+                            </ul>
+                        </li>-->
+                        <!--<li>
+                            <a href="<?/*=Yii::$app->request->baseUrl;*/?>/jetshopdetails/productvalidation"><i class="fa fa-check-circle" aria-hidden="true"></i> Validate Details</a>
+                        </li>-->
+
+                        <li>
+                            <a href="<?=Yii::$app->request->baseUrl;?>/combo-payment/index"><img src="<?= Yii::$app->request->baseUrl . '/images/sidebar/combo-payment.png' ?>" alt="Combo Payment">Combo Payment</a>
+                        </li>
+                        
+                        <!--<li>
+                         <a href="<?/*=Yii::$app->request->baseUrl;*/?>/upcomingclients/index"><i class="fa fa-tasks" aria-hidden="true"></i>Clients Requests</a>
+                     </li>-->
+
+
+                     <!-- referral -->
+                     <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" aria-expanded="false" data-toggle="dropdown">
+                            <i class="fa fa-handshake-o" aria-hidden="true"></i>Referral
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="<?=Yii::$app->request->baseUrl;?>/referrer/index"> <i class="fa fa-sign-in"></i>Referrers</a>
+                            </li>
+                            <li>
+                                <a href="<?=Yii::$app->request->baseUrl;?>/referral/index"><i class="fa fa-download"></i>Referral Installations</a>
+                            </li>
+                            <li>
+                                <a href="<?=Yii::$app->request->baseUrl;?>/referrer-redeem/index"> <i class="fa fa-share-square"></i>Redeem Requests</a>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+            <?php } ?>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div class="page-main">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+            <?= $content ?>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <?php if (!\Yii::$app->user->isGuest && Yii::$app->controller->id.'/'.Yii::$app->controller->action->id == 'site/index') {?>
+        <script src="<?= str_replace('/admin','',Yii::$app->request->baseUrl)?>/js/raphael.min.js"></script>
+
+    <?php }?>
+
+    <?php $this->endBody() ?>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(document).on('pjax:send', function() {
+                $('#LoadingMSG').show();
+                console.log('pjax send');
+            })
+            $(document).on('pjax:complete', function() {
+                $('#LoadingMSG').hide()
+                console.log('pjax complete');
+            })
+            $('.validate').each(function(){
+                var value=$(this).html();
+                if($.trim(value)=="Not Purchased" || $.trim(value)=="Expired")
+                {
+                    $(this).addClass("rejected");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+          $('.dropdown-submenu a.test').on("click", function(e){
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+      });
+  </script>
+
+
+</body>
+
+</html>
+<?php $this->endPage() ?>
+
+<!-- <script>
+   $(document).ready(function($) {
+        $('.ced-navbar .side-nav li.dropdown a').click(function(event){
+        event.stopPropagation();
+    })
+   });
+</script> -->
